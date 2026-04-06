@@ -1,0 +1,57 @@
+[
+  {
+    "id": "001",
+    "title": "Fortinet製品に認証バイパス脆弱性、即パッチ適用を",
+    "date": "2026-04-07",
+    "category": "セキュリティ",
+    "summary": "FortiClient EMSにCVSS 9.1の重大脆弱性CVE-2026-35616が発覚。事前認証状態で権限昇格が可能な状態となっており、即時パッチ適用が求められている。",
+    "body": "<p>Fortinetは2026年4月にFortiClient EMSの重大な脆弱性に対してアウトオブバンドパッチを公開した。</p><p>この脆弱性（CVE-2026-35616、CVSSスコア: 9.1）は事前認証APIアクセスバイパスと分類されており、攻撃者が認証なしで権限昇格を行える状態となっていた。</p><p>B2B環境でFortinetを利用している場合は、まず対象バージョンを確認し、パッチを最優先で適用することを推奨する。パッチ未適用の状態でのインターネット公開は重大なリスクとなる。</p><h3>対応手順</h3><ul><li>影響バージョンの確認（公式アドバイザリを参照）</li><li>アウトオブバンドパッチの適用</li><li>ログを確認し不審なAPIアクセスがないか検証</li></ul>",
+    "source_url": "https://securityboulevard.com/2026/04/breach-of-confidence-3-april-2026/",
+    "affiliate_html": "<a href='#' style='display:inline-block;padding:10px 20px;background:#0066cc;color:#fff;border-radius:4px;font-size:13px;'>▶ 脆弱性管理ツール Tenable.io を試す</a>",
+    "views": 1420
+  },
+  {
+    "id": "002",
+    "title": "ShopifyがChatGPT内で直接購買できる仕組みを公開",
+    "date": "2026-04-07",
+    "category": "EC",
+    "summary": "ShopifyのAgentic StorefrontによりChatGPT・Copilot・Gemini経由で商品購入が完結するようになった。AIとの会話から決済まで離脱ゼロの導線が整った。",
+    "body": "<p>Shopifyは2026年4月、ChatGPTおよびMicrosoft Copilot・Geminiアプリ内で商品購入が完結するAgentic Storefrontを正式公開した。</p><p>従来の「検索→クリック→カート→決済」という導線が、「AIとの会話→そのまま決済」に置き換わる構造的な変化が始まっている。</p><p>Macy'sのデータによると、AIショッピングアシスタントを利用した顧客の購買単価は非利用者の4.75倍に達したとされており、EC運営者にとってAI対応は無視できない課題となっている。</p><h3>EC運営者がやるべきこと</h3><ul><li>Shopify管理画面でAgentic Storefront設定を有効化</li><li>商品説明文をAI読み取り最適化（簡潔で構造化された文章）</li><li>在庫連携とリアルタイム価格反映の確認</li></ul>",
+    "source_url": "https://www.practicalecommerce.com/new-ecommerce-tools-april-1-2026",
+    "affiliate_html": "<a href='#' style='display:inline-block;padding:10px 20px;background:#96bf48;color:#fff;border-radius:4px;font-size:13px;'>▶ Shopify を無料で始める（14日間トライアル）</a>",
+    "views": 2310
+  },
+  {
+    "id": "003",
+    "title": "SaaSアフィリエイト市場が143億ドル規模へ拡大",
+    "date": "2026-04-07",
+    "category": "副業・アフィ",
+    "summary": "2026年の米国アフィリエイト広告費は143億ドルに到達見込み。Notion・Webflowは初年度50%還元、HubSpotは180日クッキーで長期収益設計が可能。",
+    "body": "<p>2026年、米国のアフィリエイト広告市場は143億ドルに到達する見込みで、SaaS・金融ジャンルが単価をけん引している。</p><p>特に注目される還元率の高いプログラムは以下の通り：</p><ul><li><strong>Notion</strong>: 初年度の有料アップグレードに対して50%、180日クッキー</li><li><strong>Webflow</strong>: 新規顧客の初年度サブスクの50%</li><li><strong>HubSpot</strong>: 30%リカーリングコミッション、180日クッキー</li></ul><p>大量トラフィックよりも、数千人規模の専門読者・視聴者を持つニッチコンテンツの方が成約率が高い構造に変わってきている。副業アフィとしては「法人向けSaaS紹介+専門解説記事」の組み合わせが2026年の主流になりつつある。</p>",
+    "source_url": "https://commissiondex.com/blog/saas-affiliate-programs-guide/",
+    "affiliate_html": "<a href='#' style='display:inline-block;padding:10px 20px;background:#ff7a59;color:#fff;border-radius:4px;font-size:13px;'>▶ HubSpot アフィリエイトプログラムに登録する</a>",
+    "views": 1870
+  },
+  {
+    "id": "004",
+    "title": "MicrosoftがAzure向け特化モデルMAI3種を同時発表",
+    "date": "2026-04-06",
+    "category": "AI",
+    "summary": "MAI-Transcribe-1（文字起こし2.5倍速）、MAI-Voice-1（音声）、MAI-Image-2（画像生成2倍速）をAzure Foundryで公開。汎用LLMと別軸の特化型展開が本格化。",
+    "body": "<p>Microsoftは2026年4月2日、Azure Foundry向けに3種の特化型AIモデルを同時発表した。</p><ul><li><strong>MAI-Transcribe-1</strong>: 主要25言語対応の音声文字起こし。既存Azureサービス比2.5倍の速度</li><li><strong>MAI-Voice-1</strong>: 音声合成・音声処理に特化</li><li><strong>MAI-Image-2</strong>: 画像生成速度が従来比2倍、品質は同等水準を維持</li></ul><p>汎用大規模言語モデルではなく、タスク特化型モデルへの分化が進んでいる点が注目される。API選定において「汎用 vs 特化」の判断がコスト・速度に直結する時代になっている。</p>",
+    "source_url": "https://microsoft.ai/news/today-were-announcing-3-new-world-class-mai-models-available-in-foundry/",
+    "affiliate_html": "<a href='#' style='display:inline-block;padding:10px 20px;background:#0078d4;color:#fff;border-radius:4px;font-size:13px;'>▶ Azure OpenAI Service を試す</a>",
+    "views": 980
+  },
+  {
+    "id": "005",
+    "title": "経産省がAIリスク分類に基づく監査義務を規定",
+    "date": "2026-04-06",
+    "category": "AI",
+    "summary": "高・中・低のリスク分類に応じた説明責任と第三者監査義務を規定。2026年秋施行予定。高リスクAI導入企業は今から対応コストの試算が必要。",
+    "body": "<p>経産省は2026年4月、AIガバナンスに関する新指針を発表した。リスク分類（高・中・低）に応じた説明責任と第三者監査義務が規定されており、2026年秋の施行が予定されている。</p><h3>リスク分類の概要</h3><ul><li><strong>高リスク</strong>: 採用・融資審査・医療診断等に活用するAI。第三者監査が義務化。</li><li><strong>中リスク</strong>: 推薦エンジン・広告最適化等。説明責任の文書化が求められる。</li><li><strong>低リスク</strong>: チャットボット・社内効率化ツール等。現時点で規制は軽微。</li></ul><p>違反時のペナルティ詳細は今後のガイドライン更新で明確化される見込みで、企業法務・IT部門の連携が急務となっている。</p>",
+    "source_url": "https://ai-kenkyujo.com/news/ai-saishin/",
+    "affiliate_html": "<a href='#' style='display:inline-block;padding:10px 20px;background:#333;color:#fff;border-radius:4px;font-size:13px;'>▶ AIガバナンス対策サービスを見る</a>",
+    "views": 760
+  }
+]

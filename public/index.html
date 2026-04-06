@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>トップ</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<div class="container">
+  <main class="main-content">
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="記事を検索...">
+      <div id="filter-bar" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+    </div>
+    <div id="article-list">読み込み中...</div>
+  </main>
+
+  <aside class="sidebar" id="sidebar"></aside>
+</div>
+
+<footer id="site-footer"></footer>
+
+<script src="./assets/components.js"></script>
+<script src="./assets/main.js"></script>
+</body>
+</html>

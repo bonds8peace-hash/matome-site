@@ -1,0 +1,17 @@
+{
+  "name": "matome-site-auto",
+  "version": "1.0.0",
+  "description": "AIニュース自動巡回・記事生成・X投稿・まとめサイト更新",
+  "main": "scripts/daily-run.js",
+  "scripts": {
+    "morning": "node scripts/daily-run.js morning",
+    "noon":    "node scripts/daily-run.js noon",
+    "evening": "node scripts/daily-run.js evening",
+    "deploy":  "echo 'GitHub Actions が自動デプロイします'"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "rss-parser": "^3.13.0",
+    "twitter-api-v2": "^1.18.2"
+  }
+}
