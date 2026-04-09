@@ -1,14 +1,21 @@
 'use strict';
 require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 
-/** RSS フィード一覧（日本語優先・英語補完） */
+/** RSS フィード一覧（副業×AI特化・日本語優先） */
 const RSS_FEEDS = [
+  // AI・テクノロジー系
   { url: 'https://aismiley.co.jp/feed/',                        lang: 'ja', weight: 3 },
   { url: 'https://www.publickey1.jp/atom.xml',                  lang: 'ja', weight: 3 },
   { url: 'https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml',  lang: 'ja', weight: 2 },
-  { url: 'https://gigazine.net/news/rss_2.0/',                  lang: 'ja', weight: 2 },
+  // 副業・フリーランス・収益化系
+  { url: 'https://crowdworks.jp/blog/feed',                     lang: 'ja', weight: 3 },
+  { url: 'https://note.com/hashtag/AI副業?rss=1',               lang: 'ja', weight: 3 },
+  { url: 'https://note.com/hashtag/フリーランス?rss=1',         lang: 'ja', weight: 2 },
+  // Web制作・ノーコード系
+  { url: 'https://webtan.impress.co.jp/rss/all.rdf',            lang: 'ja', weight: 2 },
+  { url: 'https://gigazine.net/news/rss_2.0/',                  lang: 'ja', weight: 1 },
+  // 英語補完
   { url: 'https://techcrunch.com/feed/',                        lang: 'en', weight: 1 },
-  { url: 'https://feeds.feedburner.com/TheHackersNews',         lang: 'en', weight: 1 },
 ];
 
 /** カテゴリ別アフィリエイト枠テンプレート（URLは後で差し替え） */
@@ -63,6 +70,6 @@ module.exports = {
   X_API_SECRET:       process.env.X_API_SECRET,
   X_ACCESS_TOKEN:     process.env.X_ACCESS_TOKEN,
   X_ACCESS_TOKEN_SECRET: process.env.X_ACCESS_TOKEN_SECRET,
-  FIXED_HASHTAG:      process.env.FIXED_HASHTAG || '#AI速報',
+  FIXED_HASHTAG:      process.env.FIXED_HASHTAG || '#AI副業',
   MAX_ARTICLES:       parseInt(process.env.MAX_ARTICLES || '100', 10),
 };
