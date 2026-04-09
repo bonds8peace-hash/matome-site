@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <!-- ADSENSE_PLACEHOLDER: ここにAdSenseコードを貼る -->
+  <style>
+    .contact-form { max-width: 560px; }
+    .contact-form label { display:block; font-size:13px; font-weight:bold; margin-bottom:4px; margin-top:14px; }
+    .contact-form input, .contact-form textarea {
+      width:100%; padding:8px 10px; border:1px solid #bbb;
+      font-size:13px; font-family:inherit; outline:none;
+    }
+    .contact-form input:focus, .contact-form textarea:focus { border-color:#0066cc; }
+    .contact-form textarea { height:140px; resize:vertical; }
+    .contact-form button {
+      margin-top:16px; padding:10px 28px;
+      background:#cc0000; color:#fff; border:none;
+      font-size:14px; cursor:pointer;
+    }
+    .contact-form button:hover { background:#a30000; }
+    .contact-note { font-size:12px; color:#888; margin-top:10px; }
+  </style>
+</head>
+<body>
+
+<header id="site-header"></header>
+
+<div class="container">
+  <main class="main-content">
+    <div class="article-detail">
+      <h1>お問い合わせ</h1>
+      <div class="body" style="margin-top:16px;">
+        <p>記事の内容に関するご意見・ご指摘、掲載に関するお問い合わせはこちらからどうぞ。</p>
+        <p style="margin-top:8px;color:#888;font-size:12px;">※ 返信にお時間をいただく場合があります。</p>
+
+        <form class="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
+
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="例：example@email.com" required>
+
+          <label for="subject">件名</label>
+          <input type="text" id="subject" name="subject" placeholder="例：記事の内容について" required>
+
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" placeholder="お問い合わせ内容を入力してください" required></textarea>
+
+          <button type="submit">送信する</button>
+          <p class="contact-note">送信後、確認メールが届かない場合は迷惑メールフォルダをご確認ください。</p>
+        </form>
+      </div>
+    </div>
+  </main>
+  <aside class="sidebar" id="sidebar"></aside>
+</div>
+
+<footer id="site-footer"></footer>
+
+<script src="./assets/components.js"></script>
+<script>
+  SITE.init().then(() => SITE.renderSidebar());
+</script>
+</body>
+</html>

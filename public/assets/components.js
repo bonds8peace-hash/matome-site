@@ -31,6 +31,7 @@ const SITE = {
         <nav>
           <a href="./index.html">トップ</a>
           <a href="./category.html">カテゴリ</a>
+          <a href="./contact.html">お問い合わせ</a>
         </nav>
       </div>`;
     document.title = document.title
@@ -41,7 +42,13 @@ const SITE = {
   _renderFooter() {
     const el = document.getElementById('site-footer');
     if (!el) return;
-    el.innerHTML = `<p>&copy; ${new Date().getFullYear()} ${this.config.siteName}</p>`;
+    el.innerHTML = `
+      <p>&copy; ${new Date().getFullYear()} ${this.config.siteName}</p>
+      <p style="margin-top:8px;font-size:11px;">
+        <a href="./privacy.html">プライバシーポリシー</a>
+        &nbsp;|&nbsp;
+        <a href="./contact.html">お問い合わせ</a>
+      </p>`;
   },
 
   /** カテゴリ一覧を集計して返す */
