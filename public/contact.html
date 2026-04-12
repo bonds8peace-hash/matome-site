@@ -53,42 +53,27 @@
         <p>記事の内容に関するご意見・ご指摘、掲載に関するお問い合わせはこちらからどうぞ。</p>
         <p style="margin-top:8px;color:#888;font-size:12px;">※ 返信にお時間をいただく場合があります。</p>
 
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
-
-          <!-- ハニーポット（スパムbot対策：人間には見えない） -->
-          <div class="hp-field">
-            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-          </div>
+        <form class="contact-form" id="contact-form" action="mailto:ai.kasegu.lab@gmail.com" method="GET" enctype="text/plain">
 
           <label for="name">お名前</label>
-          <input type="text" id="name" name="name" placeholder="例：山田 太郎" required>
-
-          <label for="email">メールアドレス</label>
-          <input type="email" id="email" name="email" placeholder="例：example@email.com" required>
+          <input type="text" id="name" name="お名前" placeholder="例：山田 太郎" required>
 
           <label for="subject">件名</label>
           <input type="text" id="subject" name="subject" placeholder="例：記事の内容について" required>
 
           <label for="message">お問い合わせ内容</label>
-          <textarea id="message" name="message" placeholder="お問い合わせ内容を入力してください" required></textarea>
+          <textarea id="message" name="お問い合わせ内容" placeholder="お問い合わせ内容を入力してください" required></textarea>
 
-          <button type="submit" id="submit-btn">送信する</button>
+          <button type="submit" id="submit-btn">メールで送信する</button>
           <p class="contact-note">
-            送信後、確認メールが届かない場合は迷惑メールフォルダをご確認ください。<br>
-            ※ Formspree管理画面でreCAPTCHAを有効にするとスパムをさらに防げます。
+            ボタンを押すとメールアプリが開きます。そのまま送信してください。<br>
+            メールアプリが開かない場合は <strong>ai.kasegu.lab@gmail.com</strong> へ直接ご連絡ください。
           </p>
         </form>
 
-        <!-- 送信成功メッセージ -->
-        <div class="thanks-msg" id="thanks-msg">
-          お問い合わせを受け付けました。内容を確認の上、数日以内にご返信いたします。<br>
-          返信が届かない場合は迷惑メールフォルダをご確認ください。
-        </div>
-
-        <!-- エラーメッセージ -->
-        <div class="error-msg" id="error-msg">
-          送信に失敗しました。時間をおいて再度お試しください。<br>
-          解決しない場合は <strong>ai.kasegu.lab[at]gmail.com</strong> へ直接ご連絡ください。
+        <!-- 直接連絡先 -->
+        <div class="privacy-note" style="margin-top:12px;">
+          直接メールでのお問い合わせも受け付けております：<strong>ai.kasegu.lab@gmail.com</strong>
         </div>
 
         <!-- プライバシー告知 -->
@@ -108,34 +93,7 @@
 <script>
   SITE.init().then(() => SITE.renderSidebar());
 
-  const form = document.getElementById('contact-form');
-  const thanksMsg = document.getElementById('thanks-msg');
-  const errorMsg = document.getElementById('error-msg');
-  const submitBtn = document.getElementById('submit-btn');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.textContent = '送信中...';
-
-    try {
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        form.style.display = 'none';
-        thanksMsg.style.display = 'block';
-      } else {
-        throw new Error('送信失敗');
-      }
-    } catch {
-      errorMsg.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = '送信する';
-    }
-  });
+  // mailto フォームのためJSによる送信制御は不要
 </script>
 </body>
 </html>
